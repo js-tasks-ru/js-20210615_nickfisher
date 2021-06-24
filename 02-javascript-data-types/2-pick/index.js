@@ -6,4 +6,16 @@
  */
 export const pick = (obj, ...fields) => {
 
+    let pickedFieldsObject = {};
+
+    for (let field of fields) {
+        if (obj[field]) {
+            pickedFieldsObject = {
+                ...pickedFieldsObject,
+                [field]: obj[field]
+            }
+        }
+    }
+    
+    return pickedFieldsObject;
 };
