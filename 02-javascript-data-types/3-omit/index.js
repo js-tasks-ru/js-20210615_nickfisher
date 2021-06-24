@@ -14,7 +14,6 @@ export const omit = (obj, ...fields) => {
                 [key]: value
             }
         }
-        
     }
 
     return omittedFieldsObject;
