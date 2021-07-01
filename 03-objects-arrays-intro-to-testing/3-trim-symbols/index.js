@@ -13,7 +13,7 @@ export function trimSymbols(string, size) {
       return string;
     }
 
-    const resultString = [];
+    const resultArray = [];
     let symbolArray = string.split(''),
     counter = 0,
     previousSymbol;
@@ -23,14 +23,14 @@ export function trimSymbols(string, size) {
         if (previousSymbol === symbol) {
           if (counter < size) {
             counter++;
-            resultString.push(symbol);
+            resultArray.push(symbol);
           }
         } else {
           previousSymbol = symbol;
           counter = 1;
-          resultString.push(symbol);
+          resultArray.push(symbol);
         }
       }
       
-    return resultString.join('');
+    return resultArray.join('');
 }
